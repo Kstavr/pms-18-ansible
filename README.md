@@ -7,7 +7,7 @@ This project sets up Telegraf and InfluxDB using Ansible on a target server. The
 ## Prerequisites
 
 - Ansible installed on the control node
-- A target server with Docker installed
+- A target server 
 - InfluxDB token and organization details
 
 ## Installation Steps

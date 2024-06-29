@@ -176,7 +176,7 @@
             collection_jitter = "0s"
             flush_interval = "10s"
             flush_jitter = "0s"
-            precision = ""
+            precision = "0s"
             hostname = ""
             omit_hostname = false
           [[outputs.influxdb_v2]]
@@ -187,9 +187,13 @@
           [[inputs.docker]]
             endpoint = "unix:///var/run/docker.sock"
             gather_services = false
-            container_names = []
+            source_tag = false
+            container_name_include = []
+            container_name_exclude = []
+            container_state_include = []
+            container_state_exclude = []
             timeout = "5s"
-            perdevice_include = []
+            perdevice_include = ["cpu"] 
             total = true
             docker_label_include = []
             docker_label_exclude = []
